@@ -14,7 +14,6 @@
     color: #1a1a2e;
   }
 
-  /* Top nav */
   .topnav {
     background: #1a2236;
     padding: 10px 24px;
@@ -26,11 +25,8 @@
   .topnav .crumb { color: rgba(255,255,255,0.85); font-size: 12px; }
   .topnav .current { color: #fff; font-weight: 500; font-size: 12px; }
 
-  /* Page wrapper */
   .page { padding: 24px 28px; }
 
-  /* Report title block */
-  .report-title-block { margin-bottom: 6px; }
   .report-title { font-size: 18px; font-weight: 600; color: #1a2236; }
   .report-subtitle {
     font-size: 12px;
@@ -39,16 +35,13 @@
     line-height: 1.5;
   }
 
-  /* Top action row */
   .action-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin: 14px 0 10px;
-    flex-wrap: wrap;
     gap: 8px;
   }
-  .action-row-right { display: flex; align-items: center; gap: 8px; }
 
   .btn {
     display: inline-flex;
@@ -61,7 +54,6 @@
     background: #fff;
     color: #374151;
     cursor: pointer;
-    text-decoration: none;
   }
   .btn:hover { background: #f9fafb; }
   .btn-primary { background: #2563eb; color: #fff; border-color: #2563eb; }
@@ -71,14 +63,13 @@
   .filter-bar {
     display: flex;
     align-items: center;
-    gap: 0;
+    flex-wrap: wrap;
+    gap: 6px;
     margin-bottom: 12px;
     background: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     padding: 10px 14px;
-    flex-wrap: wrap;
-    gap: 8px;
   }
   .filter-label-main {
     font-size: 11px;
@@ -86,25 +77,17 @@
     color: #6b7280;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-right: 6px;
     white-space: nowrap;
+    margin-right: 4px;
   }
   .filter-group {
     display: flex;
     align-items: center;
-    gap: 5px;
     flex-wrap: wrap;
+    gap: 5px;
   }
-  .filter-field {
-    font-size: 12px;
-    color: #374151;
-    font-weight: 600;
-  }
-  .filter-op {
-    font-size: 11px;
-    color: #9ca3af;
-    font-style: italic;
-  }
+  .filter-field { font-size: 12px; color: #374151; font-weight: 600; white-space: nowrap; }
+  .filter-op { font-size: 11px; color: #9ca3af; font-style: italic; white-space: nowrap; }
   .filter-val {
     display: inline-flex;
     align-items: center;
@@ -115,6 +98,7 @@
     background: #eff6ff;
     color: #1d4ed8;
     font-weight: 500;
+    white-space: nowrap;
   }
   .or-pill {
     display: inline-flex;
@@ -126,7 +110,7 @@
     color: #fff;
     background: #6366f1;
     letter-spacing: 0.08em;
-    margin: 0 8px;
+    margin: 0 6px;
     flex-shrink: 0;
   }
   .add-filter {
@@ -140,7 +124,7 @@
     background: transparent;
     color: #9ca3af;
     cursor: pointer;
-    margin-left: 6px;
+    margin-left: 4px;
   }
 
   /* Disclaimer */
@@ -156,7 +140,7 @@
   }
   .disclaimer strong { font-weight: 600; color: #92400e; }
 
-  /* Table container */
+  /* Table */
   .table-wrap {
     background: #fff;
     border-radius: 8px;
@@ -169,14 +153,15 @@
     border-collapse: collapse;
     table-layout: fixed;
   }
-  th:nth-child(1) { width: 11%; }
-  th:nth-child(2) { width: 9%; }
+
+  th:nth-child(1) { width: 10%; }
+  th:nth-child(2) { width: 8%; }
   th:nth-child(3) { width: 9%; }
   th:nth-child(4) { width: 9%; }
-  th:nth-child(5) { width: 18%; }
+  th:nth-child(5) { width: 17%; }
   th:nth-child(6) { width: 12%; }
-  th:nth-child(7) { width: 14%; }
-  th:nth-child(8) { width: 10%; }
+  th:nth-child(7) { width: 13%; }
+  th:nth-child(8) { width: 9%; }
 
   thead tr { background: #f8fafc; }
 
@@ -207,44 +192,22 @@
   tbody tr:hover td { background: #f8fafc; }
 
   .name { font-weight: 500; color: #111827; }
-  .guid { font-family: 'Courier New', monospace; font-size: 11px; color: #9ca3af; }
-  .dept { color: #374151; }
-  .hold-name { color: #1d4ed8; font-size: 12px; }
-  .assoc-date { color: #374151; font-size: 12px; white-space: nowrap; }
+  .guid { font-family: 'Courier New', monospace; font-size: 10.5px; color: #9ca3af; }
+  .hold-name { color: #1f2937; font-size: 12px; }
+  .assoc-date { color: #374151; font-size: 12px; }
 
-  .status-unpublished { color: #b45309; }
-  .status-issued { color: #166534; }
-  .reminder-inactive { color: #b91c1c; }
+  .status-unpublished { color: #1f2937; }
+  .status-issued      { color: #1f2937; }
+  .status-selfack     { color: #1f2937; }
+  .status-proxyack    { color: #1f2937; }
+  .status-resent      { color: #1f2937; }
+  .status-escalated   { color: #1f2937; }
+
+  .reminder-off   { color: #1f2937; }
   .reminder-blank { color: #9ca3af; }
 
-  /* Footer */
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0 0;
-    margin-top: 4px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .footer-count { font-size: 12px; color: #6b7280; }
-  .footer-note { font-size: 11.5px; color: #2563eb; font-style: italic; }
-
-  .pagination { display: flex; align-items: center; gap: 4px; }
-  .pg { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border: 1px solid #d1d5db; border-radius: 5px; font-size: 12px; cursor: pointer; color: #374151; background: #fff; }
-  .pg.active { background: #2563eb; color: #fff; border-color: #2563eb; font-weight: 500; }
-
-  .proto-watermark {
-    text-align: center;
-    margin-top: 28px;
-    font-size: 11px;
-    color: #9ca3af;
-    letter-spacing: 0.04em;
-  }
-
-
   /* Tooltip */
-  .th-wrap { display: inline-flex; align-items: center; gap: 5px; }
+  .tooltip-host { position: relative; display: inline-flex; }
   .help-icon {
     display: inline-flex;
     align-items: center;
@@ -259,13 +222,6 @@
     font-style: normal;
     cursor: help;
     flex-shrink: 0;
-    position: static;
-  }
-  .table-wrap { overflow: visible; }
-  thead { position: relative; z-index: 10; }
-  .tooltip-host {
-    position: relative;
-    display: inline-flex;
   }
   .tooltip-host .tooltip-box {
     display: none;
@@ -297,6 +253,36 @@
   }
   .tooltip-host:hover .tooltip-box { display: block; }
 
+  /* Footer */
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 0;
+    margin-top: 4px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-count { font-size: 12px; color: #6b7280; }
+  .footer-note { font-size: 11.5px; color: #2563eb; font-style: italic; }
+
+  .pagination { display: flex; align-items: center; gap: 4px; }
+  .pg {
+    width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid #d1d5db; border-radius: 5px;
+    font-size: 12px; cursor: pointer; color: #374151; background: #fff;
+  }
+  .pg.active { background: #2563eb; color: #fff; border-color: #2563eb; font-weight: 500; }
+
+  .proto-watermark {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 11px;
+    color: #9ca3af;
+    letter-spacing: 0.04em;
+  }
+
   @media print {
     body { background: #fff; }
     .topnav { display: none; }
@@ -317,41 +303,44 @@
 
 <div class="page">
 
-  <div class="report-title-block">
-    <div class="report-title">Unpublished Custodians Report</div>
-    <div class="report-subtitle">
-      Custodians who are unpublished before issuance &nbsp;|&nbsp; Custodians who were issued and later had their reminders turned off
-    </div>
+  <div class="report-title">Unpublished Custodians Report</div>
+  <div class="report-subtitle">
+    Custodians who are unpublished before issuance &nbsp;|&nbsp; Custodians who were issued and later had their reminders turned off
   </div>
 
   <div class="action-row">
-    <div><!-- spacer --></div>
-    <div class="action-row-right">
-      <button class="btn">&#9783; Filters</button>
-      <button class="btn">&#9776; Customize Columns</button>
-      <button class="btn btn-primary">&#8595; Export</button>
-      <button class="btn">&#10697; Copy</button>
-    </div>
+    <button class="btn">&#9783; Filters</button>
+    <button class="btn">&#9776; Customize Columns</button>
+    <button class="btn btn-primary">&#8595; Export</button>
+    <button class="btn">&#10697; Copy</button>
   </div>
 
-  <!-- Filter bar with OR logic -->
+  <!-- Filter bar -->
   <div class="filter-bar">
     <span class="filter-label-main">Active Filters:</span>
 
     <div class="filter-group">
-      <span class="filter-field">Custodian Status</span>
+      <span class="filter-field">Custodian Legal Hold Status</span>
       <span class="filter-op">equals</span>
-      <span class="filter-val">Unpublished</span>
-      <span class="filter-op">or</span>
       <span class="filter-val">Issued</span>
+      <span class="filter-op">or</span>
+      <span class="filter-val">Self Acknowledged</span>
+      <span class="filter-op">or</span>
+      <span class="filter-val">Proxy Acknowledged</span>
+      <span class="filter-op">or</span>
+      <span class="filter-val">Resent</span>
+      <span class="filter-op">or</span>
+      <span class="filter-val">Escalated</span>
+      <span class="filter-op">or</span>
+      <span class="filter-val">Unpublished</span>
     </div>
 
-    <span class="or-pill">OR</span>
+    <span class="or-pill">AND</span>
 
     <div class="filter-group">
       <span class="filter-field">Resend Reminder Status</span>
       <span class="filter-op">equals</span>
-      <span class="filter-val">Inactive</span>
+      <span class="filter-val">Off</span>
       <span class="filter-op">or</span>
       <span class="filter-val">None</span>
     </div>
@@ -374,7 +363,7 @@
           <th>Title</th>
           <th>Associated Legal Hold Name</th>
           <th>Custodian Legal Hold Status</th>
-          <th>Custodian Hold Association <span style="white-space:nowrap;">Date&nbsp;<span class="tooltip-host"><i class="help-icon">?</i><span class="tooltip-box">Date when the custodian was initially Issued or set to Unpublished on this legal hold</span></span></span></th>
+          <th>Initially Issued On <span style="white-space:nowrap;"><span class="tooltip-host"><i class="help-icon">?</i><span class="tooltip-box">Date when the custodian was initially Issued or set to Unpublished on this legal hold</span></span></span></th>
           <th>Resend Reminder Status</th>
         </tr>
       </thead>
@@ -382,7 +371,7 @@
         <tr>
           <td class="name">Andrea Moore</td>
           <td class="guid">a3f1-9c2e-4b71-8d0f</td>
-          <td class="dept">Legal</td>
+          <td>Legal</td>
           <td>Senior Counsel</td>
           <td class="hold-name">Barta Systems v Falken Industries 2021</td>
           <td class="status-unpublished">Unpublished</td>
@@ -392,37 +381,37 @@
         <tr>
           <td class="name">Marcus Spector</td>
           <td class="guid">b7d4-2a3c-5e89-1f06</td>
-          <td class="dept">Human Resources</td>
+          <td>Human Resources</td>
           <td>HR Director</td>
           <td class="hold-name">Rachel Green vs. Central Perk 2020</td>
           <td class="status-issued">Issued</td>
           <td class="assoc-date">Jan 08, 2024</td>
-          <td class="reminder-inactive">Inactive</td>
+          <td class="reminder-off">Off</td>
         </tr>
         <tr>
           <td class="name">Donna Paulson</td>
           <td class="guid">c9e2-6f4a-3d18-7b52</td>
-          <td class="dept">Finance</td>
+          <td>Finance</td>
           <td>CFO</td>
           <td class="hold-name">Rachel Green vs. Central Perk 2020</td>
-          <td class="status-unpublished">Unpublished</td>
+          <td class="status-selfack">Self Acknowledged</td>
           <td class="assoc-date">Jan 15, 2024</td>
-          <td class="reminder-blank">—</td>
+          <td class="reminder-off">Off</td>
         </tr>
         <tr>
-          <td class="name">Henry IV Bolingbroke</td>
+          <td class="name">Henry Bolingbroke</td>
           <td class="guid">d2b5-8e71-4c93-0a3d</td>
-          <td class="dept">Operations</td>
+          <td>Operations</td>
           <td>VP Operations</td>
           <td class="hold-name">Land Use Matter — Bella Rosoideae</td>
-          <td class="status-issued">Issued</td>
+          <td class="status-proxyack">Proxy Acknowledged</td>
           <td class="assoc-date">Feb 22, 2024</td>
-          <td class="reminder-inactive">Inactive</td>
+          <td class="reminder-off">Off</td>
         </tr>
         <tr>
           <td class="name">Jennifer Walsh</td>
           <td class="guid">e6c3-1d92-7a40-5f88</td>
-          <td class="dept">Engineering</td>
+          <td>Engineering</td>
           <td>Engineering Lead</td>
           <td class="hold-name">Lancaster Transportation 2020-001</td>
           <td class="status-unpublished">Unpublished</td>
@@ -432,37 +421,37 @@
         <tr>
           <td class="name">Robert Langdon</td>
           <td class="guid">f0a7-3b64-8e25-2c19</td>
-          <td class="dept">Compliance</td>
+          <td>Compliance</td>
           <td>Chief Compliance Officer</td>
           <td class="hold-name">TR Matter Sync — Corporate Review</td>
-          <td class="status-issued">Issued</td>
+          <td class="status-resent">Resent</td>
           <td class="assoc-date">Nov 30, 2023</td>
-          <td class="reminder-inactive">Inactive</td>
+          <td class="reminder-off">Off</td>
         </tr>
         <tr>
           <td class="name">Samantha Reed</td>
           <td class="guid">g4d8-5f10-9b37-6e41</td>
-          <td class="dept">Marketing</td>
+          <td>Marketing</td>
           <td>Marketing Manager</td>
           <td class="hold-name">Barta Systems v Falken Industries 2021</td>
-          <td class="status-unpublished">Unpublished</td>
+          <td class="status-escalated">Escalated</td>
           <td class="assoc-date">Mar 19, 2024</td>
-          <td class="reminder-blank">—</td>
+          <td class="reminder-off">Off</td>
         </tr>
         <tr>
           <td class="name">Carlos Mendez</td>
           <td class="guid">h1e9-7c23-4a56-8d72</td>
-          <td class="dept">IT</td>
+          <td>IT</td>
           <td>IT Security Analyst</td>
           <td class="hold-name">Lancaster Transportation 2020-001</td>
           <td class="status-issued">Issued</td>
           <td class="assoc-date">Dec 11, 2023</td>
-          <td class="reminder-inactive">Inactive</td>
+          <td class="reminder-off">Off</td>
         </tr>
         <tr>
           <td class="name">Priya Nair</td>
           <td class="guid">i5f2-0d84-6e91-3b60</td>
-          <td class="dept">Legal</td>
+          <td>Legal</td>
           <td>Paralegal</td>
           <td class="hold-name">Corporate Review — Exterro Internal</td>
           <td class="status-unpublished">Unpublished</td>
@@ -472,12 +461,62 @@
         <tr>
           <td class="name">Thomas Brandt</td>
           <td class="guid">j8a3-2e67-5f04-1c85</td>
-          <td class="dept">Finance</td>
+          <td>Finance</td>
           <td>Financial Analyst</td>
           <td class="hold-name">TR Matter Sync — Corporate Review</td>
-          <td class="status-issued">Issued</td>
+          <td class="status-selfack">Self Acknowledged</td>
           <td class="assoc-date">Oct 25, 2023</td>
-          <td class="reminder-inactive">Inactive</td>
+          <td class="reminder-off">Off</td>
+        </tr>
+        <tr>
+          <td class="name">Laura Kinney</td>
+          <td class="guid">k3c6-1f85-9d42-7a20</td>
+          <td>Legal</td>
+          <td>Associate Counsel</td>
+          <td class="hold-name">Barta Systems v Falken Industries 2021</td>
+          <td class="status-proxyack">Proxy Acknowledged</td>
+          <td class="assoc-date">Jun 14, 2024</td>
+          <td class="reminder-off">Off</td>
+        </tr>
+        <tr>
+          <td class="name">David Park</td>
+          <td class="guid">l9d2-4e71-6b03-5c88</td>
+          <td>Sales</td>
+          <td>Sales Director</td>
+          <td class="hold-name">Rachel Green vs. Central Perk 2020</td>
+          <td class="status-escalated">Escalated</td>
+          <td class="assoc-date">Jul 02, 2024</td>
+          <td class="reminder-off">Off</td>
+        </tr>
+        <tr>
+          <td class="name">Nina Patel</td>
+          <td class="guid">m7e4-2c93-8a16-4d51</td>
+          <td>HR</td>
+          <td>HRBP</td>
+          <td class="hold-name">Land Use Matter — Bella Rosoideae</td>
+          <td class="status-resent">Resent</td>
+          <td class="assoc-date">Aug 19, 2024</td>
+          <td class="reminder-off">Off</td>
+        </tr>
+        <tr>
+          <td class="name">James Okafor</td>
+          <td class="guid">n2f8-5d04-7e29-3b67</td>
+          <td>Operations</td>
+          <td>Operations Manager</td>
+          <td class="hold-name">Lancaster Transportation 2020-001</td>
+          <td class="status-unpublished">Unpublished</td>
+          <td class="assoc-date">Sep 05, 2024</td>
+          <td class="reminder-blank">—</td>
+        </tr>
+        <tr>
+          <td class="name">Rachel Kim</td>
+          <td class="guid">o5a1-8b36-2f74-9c43</td>
+          <td>Finance</td>
+          <td>Controller</td>
+          <td class="hold-name">Corporate Review — Exterro Internal</td>
+          <td class="status-issued">Issued</td>
+          <td class="assoc-date">Oct 11, 2024</td>
+          <td class="reminder-off">Off</td>
         </tr>
       </tbody>
     </table>
@@ -485,7 +524,7 @@
 
   <div class="footer">
     <div>
-      <span class="footer-count">Showing 1 to 10 of 10 sample records &nbsp;&middot;&nbsp;</span>
+      <span class="footer-count">Showing 1 to 15 of 15 sample records &nbsp;&middot;&nbsp;</span>
       <span class="footer-note">Live report will show all matching records</span>
     </div>
     <div class="pagination">
